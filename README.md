@@ -1,1 +1,1 @@
-# flag-reference-validator-action
+# feature-flag-reference-validator-action
