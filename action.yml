@@ -1,0 +1,13 @@
+name: 'ConfigCat Flag Reference Validator'
+description: 'Find ConfigCat feature flag usages in your source code and validating them against your own ConfigCat configuration dashboard.'
+author: 'ConfigCat'
+inputs:
+  configcat-api-key:
+    description: 'The api key of your ConfigCat project'
+    required: true
+    default: 'CONFIG_CAT_API_KEY'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  env:
+    CONFIG_CAT_API_KEY: ${{ inputs.configcat-api-key }}
