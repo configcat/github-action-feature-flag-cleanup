@@ -9,6 +9,12 @@ inputs:
   scan-directory:
     description: 'The directory to scan for flag references'
     default: '.'
+  fail-on-warnings:
+    description: 'Signals a build error in CircleCI when the validation fails. By default only warnings are showed'
+    default: false
+  debug:
+    description: 'Turns on detailed logging'
+    default: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
