@@ -6,8 +6,12 @@ inputs:
     description: 'The api key of your ConfigCat project'
     required: true
     default: 'CONFIG_CAT_API_KEY'
+  scan-directory:
+    description: 'The directory to scan for flag references'
+    default: '.'
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  env:
-    CONFIG_CAT_API_KEY: ${{ inputs.configcat-api-key }}
+  args:
+    - ${{ inputs.configcat-api-key }}
+    - ${{ inputs.scan-directory }}
