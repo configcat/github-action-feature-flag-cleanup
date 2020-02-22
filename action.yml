@@ -24,6 +24,9 @@ runs:
   args:
     - ${{ inputs.configcat-api-key }}
     - ${{ inputs.scan-directory }}
-    - '-s="{ input.configcat-cdn-server }"'
-    - '-v={ input.debug }'
-    - '-f={ input.fail-on-warnings }'
+    - '-s'
+    - ${{ input.configcat-cdn-server }}
+    - '-v'
+    - ${{ input.debug }}
+    - '-f'
+    - ${{ input.fail-on-warnings }}
