@@ -25,8 +25,8 @@ runs:
     - ${{ inputs.configcat-api-key }}
     - ${{ inputs.scan-directory }}
     - '-s'
-    - ${{ input.configcat-cdn-server }}
+    - ${{ inputs.configcat-cdn-server }}
     - '-v'
-    - ${{ input.debug }}
+    - ${{ inputs.debug }}
     - '-f'
-    - ${{ input.fail-on-warnings }}
+    - ${{ inputs.fail-on-warnings }}
