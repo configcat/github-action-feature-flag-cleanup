@@ -1,7 +1,7 @@
 # ConfigCat Feature Flag Reference Validator with GitHub Actions
 
 This GitHub Action is an utility that discovers ConfigCat feature flag usages in your source
-code and validats them against your own ConfigCat configuration dashboard.
+code and validates them against your own ConfigCat configuration dashboard.
 Documentation: https://github.com/configcat/feature-flag-reference-validator
 
 ## How to use
