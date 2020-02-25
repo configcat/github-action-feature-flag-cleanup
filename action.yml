@@ -3,17 +3,17 @@ description: 'Find ConfigCat feature flag usages in your source code and validat
 author: 'ConfigCat'
 inputs:
   configcat-api-key:
-    description: 'The api key of your ConfigCat project'
+    description: 'The api key of your ConfigCat project.'
     required: true
     default: 'CONFIG_CAT_API_KEY'
   scan-directory:
-    description: 'The directory to scan for flag references'
+    description: 'The directory to scan for flag references.'
     default: '.'
   configcat-cdn-server:
-    description: 'The domain name of the ConfigCat CDN where you ConfigCat configuration file is stored'
+    description: 'The domain name of the ConfigCat CDN where you ConfigCat configuration file is stored.'
     default: 'cdn.configcat.com'
   fail-on-warnings:
-    description: 'Signals a build error in CircleCI when the validation fails. By default only warnings are showed'
+    description: 'Signals a build error in CircleCI when the validation fails. By default only warnings are showed.'
     default: false
   debug:
     description: 'Turns on detailed logging'
