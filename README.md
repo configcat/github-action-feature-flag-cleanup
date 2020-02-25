@@ -9,7 +9,7 @@ Get your API Key from your [ConfigCat Dashboard](https://app.configcat.com/conne
 
 In yourt GitHub repository create a new Actions workflow.
 
-- **If you already have an `action.yml` file:** Copy and paste the `ConfigCatCodeReferences` job declaration below into the jobs section in your `action.yml` file.
+- **If you already have an `action.yml` file:** Copy and paste the `ConfigCatFeatureFlagCleanup` job declaration below into the jobs section in your `action.yml` file.
 - **If you don't already have a workflow file:** Create a new file titled `action.yml` in the `.github/workflows` directory of your repository. Paste the following code in the **Edit file** section:
 
 ```yaml
