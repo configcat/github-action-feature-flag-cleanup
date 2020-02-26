@@ -4,7 +4,7 @@ This GitHub Action is a utility that discovers [ConfigCat feature flag](https://
 code and validates them against your own feature flags on the [ConfigCat Dashboard](https://app.configcat.com).
 Documentation: https://github.com/configcat/feature-flag-reference-validator
 
-## To get started
+## Setting up
 1. Get your API Key from [ConfigCat Dashboard](https://app.configcat.com/connect) and store it as a [GitHub secret](https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets) under the name `CONFIG_CAT_API_KEY`.
 
 2. Create a new Actions workflow in your GitHub repo.
@@ -30,13 +30,13 @@ Documentation: https://github.com/configcat/feature-flag-reference-validator
 
   > We strongly recommend that you update the second uses attribute value to reference the latest tag in the [configcat/github-action-feature-flag-cleanup](https://github.com/configcat/github-action-feature-flag-cleanup) repository. This pins your workflow to a latest version of the action.
 
-3. Create a new branch and commit `action.yml`.
+3. Commit & push `action.yml`.
 
-4. Submit a PR to your code reviewers to be merged into your master branch.
+## Usage
 
-  > Feature Flag Cleanup is not blocked by PR approval. To block the PR set `fail-on-warnings: true`.
+Feature Flag Cleanup Action will run on any push event.
 
-  As shown in the example above, the job should run on the push event and be provided by the [configcat/github-action-feature-flag-cleanup](https://github.com/configcat/github-action-feature-flag-cleanup) repository.
+> Will not block PR approvals until you set `fail-on-warnings: true`.
 
 ## Configuration options
 
