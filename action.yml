@@ -15,7 +15,7 @@ inputs:
     description: 'Signals a build error when the validation fails. By default only warnings are showed.'
     default: false
   debug:
-    description: 'Turns on detailed logging'
+    description: 'Turns on detailed logging.'
     default: false
 runs:
   using: 'docker'
