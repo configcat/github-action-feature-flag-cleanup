@@ -41,7 +41,7 @@ As shown in the example above, the workflow should run on the push event and con
 In the `with` section you can configure the event with additional input variables to enable more functionality.
 
 | Parameter           |Description                                                                    |   Default|
-|:--------------------|:------------------------------------------------------------------------------|-------------------:|
+|---------------------|-------------------------------------------------------------------------------|:-------------------:|
 |configcat-api-key    |The api key of your ConfigCat project.                                         | CONFIG_CAT_API_KEY |
 |scan-directory       |The directory to scan for flag references.                                     | .                  |
 |configcat-cdn-server |The domain name of the ConfigCat CDN where you ConfigCat configuration file is stored.| cdn.configcat.com |
