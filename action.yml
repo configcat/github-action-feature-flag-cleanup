@@ -5,7 +5,6 @@ inputs:
   configcat-api-key:
     description: 'The api key of your ConfigCat project.'
     required: true
-    default: 'CONFIG_CAT_API_KEY'
   scan-directory:
     description: 'The directory to scan for flag references.'
     default: '.'
