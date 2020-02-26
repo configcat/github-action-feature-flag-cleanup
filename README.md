@@ -5,7 +5,7 @@ code and validates them against your own feature flags on the [ConfigCat Dashboa
 Documentation: https://github.com/configcat/feature-flag-reference-validator
 
 ## To get started
-1. Get your API Key from [ConfigCat Dashboard](https://app.configcat.com/connect) and store it as a [GitHub secret](https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets) under the name `CONFIG_CAT_API_KEY` in your repository settings.
+1. Get your API Key from [ConfigCat Dashboard](https://app.configcat.com/connect) and store it as a [GitHub secret](https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets) under the name `CONFIG_CAT_API_KEY`.
 
 2. Create a new Actions workflow in your GitHub repo.
 
@@ -36,16 +36,16 @@ jobs:
 
 > Feature Flag Cleanup is not blocked by PR approval. To block the PR set `fail-on-warnings: true`.
 
-As shown in the example above, the job should run on the push event and provided by the [configcat/github-action-feature-flag-cleanup](https://github.com/configcat/github-action-feature-flag-cleanup) repository.
+As shown in the example above, the job should run on the push event and be provided by the [configcat/github-action-feature-flag-cleanup](https://github.com/configcat/github-action-feature-flag-cleanup) repository.
 
-## Additional configuration options
+## Configuration options
 
-In the `with` section you can configure the event with additional input variables to enable more functionality.
+Add these to the `with` section to enable more functionality.
 
-| Parameter           |Description                                                                    |   Default|
-|---------------------|-------------------------------------------------------------------------------|:-------------------:|
-|`configcat-api-key`    |The api key of your ConfigCat project.                                         | CONFIG_CAT_API_KEY |
-|`scan-directory`       |The directory to run flag validations on.                                     | .                  |
-|`configcat-cdn-server` |The domain name of the ConfigCat CDN where you ConfigCat configuration file is stored.| cdn.configcat.com |
-|`fail-on-warnings`     |Signals a build error when the validation fails. By default only warnings are showed.| false |
-|`debug`                |Turns on detailed logging.| false |
+| Parameter              | Description                                                                         |      Default       |
+| ---------------------- | ----------------------------------------------------------------------------------- | :----------------: |
+| `configcat-api-key`    | The [API Key](https://app.configcat.com/connect) for your feature flags & settings. | CONFIG_CAT_API_KEY |
+| `scan-directory`       | The directory to run flag validations on.                                           |         .          |
+| `configcat-cdn-server` | To set a custom ConfigCat CDN server.                                               | cdn.configcat.com  |
+| `fail-on-warnings`     | Show warnings or stop on a build error when validation fails.                       |       false        |
+| `debug`                | More verbose logging.                                                               |       false        |
