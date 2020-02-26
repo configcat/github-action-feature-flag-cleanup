@@ -1,16 +1,16 @@
-# ConfigCat Feature Flag Cleanup with GitHub Actions
+# ConfigCat Feature Flag Cleanup for GitHub Actions
 
-This GitHub Action is an utility that discovers ConfigCat feature flag usages in your source
-code and validates them against your own ConfigCat configuration dashboard.
+This GitHub Action is a utility that discovers [ConfigCat feature flag](https://configcat.com) usages in your source
+code and validates them against your own feature flags on the [ConfigCat Dashboard](https://app.configcat.com).
 Documentation: https://github.com/configcat/feature-flag-reference-validator
 
-## How to use
-Get your API Key from your [ConfigCat Dashboard](https://app.configcat.com/connect) and store it as a [GitHub secret](https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets) with the name `CONFIG_CAT_API_KEY` in your repository settings.
+## To get started
+1. Get your API Key from [ConfigCat Dashboard](https://app.configcat.com/connect) and store it as a [GitHub secret](https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets) under the name `CONFIG_CAT_API_KEY` in your repository settings.
 
-In yourt GitHub repository create a new Actions workflow.
+2. Create a new Actions workflow in your GitHub repo.
 
 - **If you already have an `action.yml` file:** Copy and paste the `ConfigCatFeatureFlagCleanup` job declaration below into the jobs section in your `action.yml` file.
-- **If you don't already have a workflow file:** Create a new file titled `action.yml` in the `.github/workflows` directory of your repository. Paste the following code in the **Edit file** section:
+- **If you don't already have a workflow file:** Create a new file titled `action.yml` in the `.github/workflows` directory of your repository. Copy and paste the following code to `action.yml`.
 
 ```yaml
 on: push
@@ -30,9 +30,11 @@ jobs:
 
 > We strongly recommend that you update the second uses attribute value to reference the latest tag in the [configcat/github-action-feature-flag-cleanup](https://github.com/configcat/github-action-feature-flag-cleanup) repository. This pins your workflow to a latest version of the action.
 
-Commit this file under a new branch and submit as a PR to your code reviewers to be merged into your master branch.
+3. Create a new branch and commit `action.yml`.
 
-> Feature Flag Cleanup are not blocked by PR approval. To block the PR use `fail-on-warnings: true`
+4. Submit a PR to your code reviewers to be merged into your master branch.
+
+> Feature Flag Cleanup is not blocked by PR approval. To block the PR set `fail-on-warnings: true`.
 
 As shown in the example above, the workflow should run on the push event and contain an action provided by the [configcat/github-action-feature-flag-cleanup](https://github.com/configcat/github-action-feature-flag-cleanup) repository.
 
