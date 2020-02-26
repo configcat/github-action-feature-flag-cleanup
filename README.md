@@ -36,7 +36,7 @@ jobs:
 
 > Feature Flag Cleanup is not blocked by PR approval. To block the PR set `fail-on-warnings: true`.
 
-As shown in the example above, the workflow should run on the push event and contain an action provided by the [configcat/github-action-feature-flag-cleanup](https://github.com/configcat/github-action-feature-flag-cleanup) repository.
+As shown in the example above, the job should run on the push event and provided by the [configcat/github-action-feature-flag-cleanup](https://github.com/configcat/github-action-feature-flag-cleanup) repository.
 
 ## Additional configuration options
 
@@ -45,7 +45,7 @@ In the `with` section you can configure the event with additional input variable
 | Parameter           |Description                                                                    |   Default|
 |---------------------|-------------------------------------------------------------------------------|:-------------------:|
 |`configcat-api-key`    |The api key of your ConfigCat project.                                         | CONFIG_CAT_API_KEY |
-|`scan-directory`       |The directory to scan for flag references.                                     | .                  |
+|`scan-directory`       |The directory to run flag validations on.                                     | .                  |
 |`configcat-cdn-server` |The domain name of the ConfigCat CDN where you ConfigCat configuration file is stored.| cdn.configcat.com |
 |`fail-on-warnings`     |Signals a build error when the validation fails. By default only warnings are showed.| false |
 |`debug`                |Turns on detailed logging.| false |
