@@ -4,7 +4,7 @@ This GitHub Action is a utility that discovers [ConfigCat feature flag](https://
 code and validates them against your own feature flags on the [ConfigCat Dashboard](https://app.configcat.com).
 Documentation: https://github.com/configcat/feature-flag-reference-validator
 
-## Setting up
+## Installation
 1. Get your API Key from [ConfigCat Dashboard](https://app.configcat.com/connect) and store it as a [GitHub secret](https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets) under the name `CONFIG_CAT_API_KEY`.
 
 2. Create a new Actions workflow in your GitHub repo.
