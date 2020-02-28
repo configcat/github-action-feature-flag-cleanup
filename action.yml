@@ -1,6 +1,9 @@
 name: 'ConfigCat Flag Feature Cleanup'
 description: 'Find ConfigCat feature flag usages in your source code and validating them against your own ConfigCat configuration dashboard.'
 author: 'ConfigCat'
+branding:
+  icon: toggle-right
+  color: red
 inputs:
   configcat-api-key:
     description: 'The api key of your ConfigCat project.'
