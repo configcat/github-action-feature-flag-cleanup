@@ -1,5 +1,5 @@
 name: 'ConfigCat Feature Flag Cleanup'
-description: 'Find ConfigCat feature flag usages in your source code and validating them against your own ConfigCat configuration dashboard.'
+description: 'Find unused feature flags in your source code.'
 author: 'ConfigCat'
 branding:
   icon: toggle-right
