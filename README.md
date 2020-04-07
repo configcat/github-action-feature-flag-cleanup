@@ -42,10 +42,10 @@ Feature Flag Cleanup Action will run on any push event.
 
 Add these to the `with` section to enable more functionality.
 
-| Parameter              | Description                                                                         |      Default       |
-| ---------------------- | ----------------------------------------------------------------------------------- | :----------------: |
+| Parameter              | Description                                                                        |      Default       |
+| ---------------------- | ---------------------------------------------------------------------------------- | :----------------: |
 | `configcat-sdk-key`    | The [SDK Key](https://app.configcat.com/sdkkey) for your feature flags & settings. | CONFIG_CAT_SDK_KEY |
-| `scan-directory`       | The directory to run flag validations on.                                           |         .          |
-| `configcat-cdn-server` | To set a custom ConfigCat CDN server.                                               | cdn.configcat.com  |
-| `fail-on-warnings`     | Show warnings or stop on a build error when validation fails.                       |       false        |
-| `debug`                | More verbose logging.                                                               |       false        |
+| `scan-directory`       | The directory to run flag validations on.                                          |         .          |
+| `configcat-cdn-server` | To set a custom ConfigCat CDN server.                                              | cdn.configcat.com  |
+| `fail-on-warnings`     | Show warnings or stop on a build error when validation fails.                      |       false        |
+| `debug`                | More verbose logging.                                                              |       false        |
