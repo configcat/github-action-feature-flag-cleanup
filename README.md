@@ -5,7 +5,7 @@ code and validates them against your own feature flags on the [ConfigCat Dashboa
 Documentation: https://github.com/configcat/feature-flag-reference-validator
 
 ## Installation
-1. Get your API Key from [ConfigCat Dashboard](https://app.configcat.com/connect) and store it as a [GitHub secret](https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets) under the name `CONFIG_CAT_API_KEY`.
+1. Get your SDK Key from [ConfigCat Dashboard](https://app.configcat.com/sdkkey) and store it as a [GitHub secret](https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets) under the name `CONFIG_CAT_SDK_KEY`.
 
 2. Create a new Actions workflow in your GitHub repo.
 
@@ -24,7 +24,7 @@ Documentation: https://github.com/configcat/feature-flag-reference-validator
        - name: ConfigCat Feature Flag Cleanup
          uses: configcat/github-action-feature-flag-cleanup@1.0.0
          with:
-           configcat-api-key: ${{ secrets.CONFIG_CAT_API_KEY }}
+           configcat-sdk-key: ${{ secrets.CONFIG_CAT_SDK_KEY }}
            fail-on-warnings: false
    ```
 
@@ -44,7 +44,7 @@ Add these to the `with` section to enable more functionality.
 
 | Parameter              | Description                                                                         |      Default       |
 | ---------------------- | ----------------------------------------------------------------------------------- | :----------------: |
-| `configcat-api-key`    | The [API Key](https://app.configcat.com/connect) for your feature flags & settings. | CONFIG_CAT_API_KEY |
+| `configcat-sdk-key`    | The [SDK Key](https://app.configcat.com/sdkkey) for your feature flags & settings. | CONFIG_CAT_SDK_KEY |
 | `scan-directory`       | The directory to run flag validations on.                                           |         .          |
 | `configcat-cdn-server` | To set a custom ConfigCat CDN server.                                               | cdn.configcat.com  |
 | `fail-on-warnings`     | Show warnings or stop on a build error when validation fails.                       |       false        |
