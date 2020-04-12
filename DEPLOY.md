@@ -2,7 +2,9 @@
    
 2. Make sure `Dockerfile` point to the correct `feature-flag-reference-validator:[MAJOR].[MINOR].[PATCH]` image.
 
-3. Create a release
+3. Commit & Push
+   
+4. Create a release
 - Via git tag
     1. Create a new version tag.
        ```bash
