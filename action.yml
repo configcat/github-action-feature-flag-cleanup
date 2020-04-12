@@ -5,9 +5,9 @@ branding:
   icon: toggle-right
   color: red
 inputs:
-  configcat-api-key:
-    description: 'The api key of your ConfigCat project.'
-    default: 'CONFIG_CAT_API_KEY'
+  configcat-sdk-key:
+    description: 'The SDK Key of your ConfigCat project.'
+    default: 'CONFIG_CAT_SDK_KEY'
   scan-directory:
     description: 'The directory to scan for flag references.'
     default: '.'
@@ -24,7 +24,7 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.configcat-api-key }}
+    - ${{ inputs.configcat-sdk-key }}
     - ${{ inputs.scan-directory }}
     - '-s'
     - ${{ inputs.configcat-cdn-server }}
