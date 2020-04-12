@@ -11,3 +11,4 @@
     git push origin --tags
     ```
 6. Create a new [Github release](https://github.com/configcat/github-action-feature-flag-cleanup/releases) with a new version tag and release notes.
+7. Test using https://github.com/configcat/flag-reference-validator-demo
